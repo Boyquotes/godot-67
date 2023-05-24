@@ -1,9 +1,23 @@
-[gd_scene format=3 uid="uid://cc6c56jctm4cs"]
+[gd_scene load_steps=3 format=3 uid="uid://cc6c56jctm4cs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3rf75"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a73pb"]
+size = Vector3(60, 2, 60)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0192816, 0.0385791, 0.468164)
-polygon = PackedVector2Array(0, 0, 0, 1, 0.979225, 1.00333, 1, 0)
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_3rf75")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_a73pb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Ground"]
+transform = Transform3D(0.942984, -0.322382, 0.0827731, 0.180967, 0.705318, 0.685403, -0.279343, -0.631345, 0.723444, 2.37029, 11.4269, 6.04964)
