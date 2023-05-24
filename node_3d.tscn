@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cc6c56jctm4cs"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0192816, 0.0385791, 0.468164)
+polygon = PackedVector2Array(0, 0, 0, 1, 0.979225, 1.00333, 1, 0)
