@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cebdxvytshix7"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_lbndv"]
+[ext_resource type="Theme" uid="uid://bceuqhsf73fkh" path="res://new_theme.tres" id="2_arhrg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e5cla"]
+blend_mode = 2
+
+[sub_resource type="Theme" id="Theme_gaasm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dntiy"]
+
+[node name="Control" type="Control"]
+material = SubResource("CanvasItemMaterial_e5cla")
+use_parent_material = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbndv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.992
+anchor_bottom = 0.997
+offset_left = 336.0
+offset_right = -286.0
+offset_bottom = -0.0560303
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.008, 1.003)
+pivot_offset = Vector2(2.742, 0)
+theme = SubResource("Theme_gaasm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="resumeButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_arhrg")
+text = "Resume
+"
+
+[node name="optionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "options
+"
+icon = SubResource("ViewportTexture_dntiy")
+
+[node name="quitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 0.815)
+layout_direction = 2
+layout_mode = 2
+text = "quit"
