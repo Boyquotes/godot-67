@@ -280,10 +280,10 @@ _data = {
 [node name="gun" type="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.788743, 5.96046e-08, 0.743606)
 cull_mask = 1047554
-fov = 70.0
+fov = 85.3
 
 [node name="1911" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20953, -3.20633, -9.14696)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.643, -0.53, -1.126)
 
 [node name="Armature" type="Node3D" parent="1911"]
 transform = Transform3D(-0.715298, 0.0920052, 0.692737, -0.69395, 0.0232988, -0.719646, -0.0823511, -0.995486, 0.0471814, 0, 1.1712, 1.15403)
