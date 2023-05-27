@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cebdxvytshix7"]
 
-[ext_resource type="Script" path="res://Control.gd" id="1_lbndv"]
-[ext_resource type="Theme" uid="uid://bceuqhsf73fkh" path="res://new_theme.tres" id="2_arhrg"]
+[ext_resource type="Script" path="res://Control.gd" id="1_d2ap1"]
+[ext_resource type="Theme" uid="uid://bceuqhsf73fkh" path="res://new_theme.tres" id="2_hebqg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e5cla"]
 blend_mode = 2
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lbndv")
+script = ExtResource("1_d2ap1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -42,7 +42,7 @@ alignment = 1
 
 [node name="resumeButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_arhrg")
+theme = ExtResource("2_hebqg")
 text = "Resume
 "
 
