@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://05sperpcw3oe"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_pvegm"]
+[ext_resource type="Script" path="res://game.gd" id="1_hshei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vqxns"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,7 +29,7 @@ glow_enabled = true
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="game" type="Node3D"]
-script = ExtResource("1_pvegm")
+script = ExtResource("1_hshei")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_c4cqv")
