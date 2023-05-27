@@ -44,6 +44,17 @@ collision_layer = 35
 collision_mask = 7
 script = ExtResource("1_6tx8t")
 
+[node name="camera" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105813, 0.57162, -0.0174722)
+current = true
+fov = 70.0
+
+[node name="gun" parent="CharacterBody3D/camera" instance=ExtResource("2_ydgwq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0964775, -0.30912, -0.0300447)
+cull_mask = 1048575
+fov = 42.9
+near = 0.008
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_7rmtw")
 
@@ -52,15 +63,7 @@ mesh = SubResource("CapsuleMesh_l2vx2")
 
 [node name="SubViewport" type="SubViewport" parent="CharacterBody3D"]
 transparent_bg = true
-size = Vector2i(468, 512)
-
-[node name="gun" parent="CharacterBody3D/SubViewport" instance=ExtResource("2_ydgwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.313271, -2.28229, 3.27671)
-
-[node name="camera" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39039, 0.91795, 0.589855)
-current = true
-fov = 70.0
+size = Vector2i(490, 525)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(38.4473, 0, 0, 0, 38.4473, 0, 0, 0, 38.4473, 0, 0, 0)
